@@ -59,6 +59,7 @@ We use `*args` when we aren’t sure how many arguments are going to be passed t
 
 - [Processes and Threads - Microsoft](https://docs.microsoft.com/windows/win32/procthread/processes-and-threads)
 - [Thread - Tech With Tim](https://youtu.be/olYdb0DdGtM)
+- [Implementing Threading in Python 3 - Tech With Tim](https://youtu.be/cdPZ1pJACMI)
 - [Example Code](src/thread.py)
 
 ```python
