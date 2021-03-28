@@ -44,3 +44,48 @@ import os
 help(os)
 dir(os)
 ```
+
+### Q37 How can the ternary operators be used in python?
+
+```python
+x = True if 5==5 else False
+```
+
+### Q38 What does this mean: `*args`, `**kwargs`? And why would we use it?
+
+We use `*args` when we aren’t sure how many arguments are going to be passed to a function, or if we want to pass a stored list or tuple of arguments to a function. `**kwargs` is used when we don’t know how many keyword arguments will be passed to a function, or it can be used to pass the values of a dictionary as keyword arguments. The identifiers args and kwargs are a convention, you could also use `*bob` and `**billy` but that would not be wise.
+
+### Q50. How is Multi-threading achieved in Python?
+
+- [Processes and Threads - Microsoft](https://docs.microsoft.com/windows/win32/procthread/processes-and-threads)
+- [Thread - Tech With Tim](https://youtu.be/olYdb0DdGtM)
+- [Example Code](src/thread.py)
+
+```python
+
+import threading
+import time
+
+
+def feed_dog(food):
+    print('Begin feeding the dog.')
+    print(f"The dog is eating {food}.")
+    time.sleep(5)
+    print('Feeding the dog complete.')
+
+
+def feed_cat(food):
+    print('Begin feeding the cat.')
+    print(f"The cat is eating {food}.")
+    time.sleep(5)
+    print('Feeding the cat complete.')
+
+
+x = threading.Thread(target=feed_dog, args=("food",))
+x.start()
+
+y = threading.Thread(target=feed_cat, args=("food",))
+y.start()
+
+print(f"Total threads = {threading.activeCount()}")
+```
