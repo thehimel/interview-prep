@@ -187,7 +187,8 @@ Lambda is an anonymous function in Python, that can accept any number of argumen
 
 mul = lambda a, b : a * b
 print(mul(2, 5))  # output => 10
-Wrapping lambda functions inside another function
+
+# Wrapping lambda functions inside another function
 def myWrapper(n):
   return lambda a : a * n
 
