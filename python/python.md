@@ -55,7 +55,7 @@ x = True if 5==5 else False
 
 We use `*args` when we aren’t sure how many arguments are going to be passed to a function, or if we want to pass a stored list or tuple of arguments to a function. `**kwargs` is used when we don’t know how many keyword arguments will be passed to a function, or it can be used to pass the values of a dictionary as keyword arguments. The identifiers args and kwargs are a convention, you could also use `*bob` and `**billy` but that would not be wise.
 
-### Q50. How is Multi-threading achieved in Python?
+### Q50 How is Multi-threading achieved in Python?
 
 - [Processes and Threads - Microsoft](https://docs.microsoft.com/windows/win32/procthread/processes-and-threads)
 - [Thread - Tech With Tim](https://youtu.be/olYdb0DdGtM)
