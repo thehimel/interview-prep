@@ -92,3 +92,20 @@ y.start()
 
 print(f"Total threads = {threading.activeCount()}")
 ```
+
+### Q85 What is map function in Python?
+
+map function executes the function given as the first argument on all the elements of the iterable given as the second argument. If the function given takes in more than 1 arguments, then many iterables are given. #Follow the link to know more similar functions.
+
+- [Python's map() - realpython.com](https://realpython.com/python-map-function/)
+
+```python
+
+def square(number):
+    return number ** 2
+
+numbers = [1, 2, 3, 4, 5]
+squared = map(square, numbers)
+
+list(squared)
+```
