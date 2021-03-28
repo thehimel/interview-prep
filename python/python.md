@@ -13,3 +13,19 @@ This is both lengthy and counterintuitive. Generator comes to the rescue in such
 Python generators are a simple way of creating iterators. All the work we mentioned above are automatically handled by generators in Python.
 
 It is fairly simple to create a generator in Python. It is as easy as defining a normal function, but with a `yield` statement instead of a `return` statement.
+
+### What are docstrings in Python?
+
+Docstrings are not actually comments, but, they are documentation strings. These docstrings are within triple quotes. They are not assigned to any variable and therefore, at times, serve the purpose of comments as well. Often used to add some documentation about a class or function.
+
+```python
+
+def sum(x, y):
+    """
+    Function to return the sum of 2 numbers.
+    :type x: int
+    :type x: int
+    :rtype: int
+    """
+    return x + y
+```
