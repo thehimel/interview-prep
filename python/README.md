@@ -195,3 +195,5 @@ def myWrapper(n):
 mulFive = myWrapper(5)
 print(mulFive(2))  # output => 10
 ```
+
+## [Concurrency in Python - realpython.com](https://realpython.com/python-concurrency/)
