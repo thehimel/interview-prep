@@ -2,7 +2,7 @@
 
 ## [Top 100 Python Interview Questions You Must Prepare In 2021 - Edureka](https://www.edureka.co/blog/interview-questions/python-interview-questions/)
 
-### What are the generators in python?
+### Q28 What are the generators in python?
 
 [Link](https://www.programiz.com/python-programming/generator)
 
@@ -14,7 +14,7 @@ Python generators are a simple way of creating iterators. All the work we mentio
 
 It is fairly simple to create a generator in Python. It is as easy as defining a normal function, but with a `yield` statement instead of a `return` statement.
 
-### What are docstrings in Python?
+### Q32 What are docstrings in Python?
 
 Docstrings are not actually comments, but, they are documentation strings. These docstrings are within triple quotes. They are not assigned to any variable and therefore, at times, serve the purpose of comments as well. Often used to add some documentation about a class or function.
 
@@ -28,4 +28,19 @@ def sum(x, y):
     :rtype: int
     """
     return x + y
+```
+
+### Q34 What is the usage of help() and dir() functions in Python?
+
+Help() and dir() both functions are accessible from the Python interpreter and used for viewing a consolidated dump of built-in functions.
+
+Help() function: The help() function is used to display the documentation string and also facilitates you to see the help related to modules, keywords, attributes, etc.
+
+Dir() function: The dir() function is used to display the defined symbols.
+
+```python
+
+import os
+help(os)
+dir(os)
 ```
