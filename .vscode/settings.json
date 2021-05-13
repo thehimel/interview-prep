@@ -8,5 +8,5 @@
     // Settings for markdown files.
     "[markdown]": {
         "files.trimTrailingWhitespace": false,
-    }
+    },
 }
