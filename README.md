@@ -42,7 +42,7 @@ A repository to store the answers for frequently asked interview questions.
 - What are the differences between thread and process? How to declare them in Python?
 - How multi-processing is achieved in Python?
 - How multi-threading is achieved in Python?
-- What are the differences between synchronous and asynchronous programming in Python?
+- What are the differences between synchronous and asynchronous programming?
 - How to achieved asynchronous programming in Python?
 - How to use asyncio in Python?
 - How cache and session are managed in Python?
