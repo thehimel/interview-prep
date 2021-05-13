@@ -38,7 +38,7 @@ A repository to store the answers for frequently asked interview questions.
 - How exceptions are handled in Python? Explain the demerits of using a bare exception.
 - What is docstring in Python? What are the benefits of it?
 
-- Explain concurrency in Python?
+- Explain concurrency in Python.
 - What are the differences between thread and process? How to declare them in Python?
 - How multi-processing is achieved in Python?
 - How multi-threading is achieved in Python?
