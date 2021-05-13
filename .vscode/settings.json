@@ -4,9 +4,4 @@
         "C:\\Users\\SANDHI\\.conda\\envs\\general\\Lib\\site-packages"
     ],
     "editor.minimap.enabled": true,
-
-    // Settings for markdown files.
-    "[markdown]": {
-        "files.trimTrailingWhitespace": false,
-    },
 }
