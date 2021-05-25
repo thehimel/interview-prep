@@ -197,3 +197,111 @@ print(mulFive(2))  # output => 10
 ```
 
 ## [Concurrency in Python - realpython.com](https://realpython.com/python-concurrency/)
+
+## Specific Questions from My Interview Experiences
+
+### What are the differences between 'is' and '=='?
+
+Difference between identity operator (is) and the equality operator (==)
+
+Source: [Comparing Python Objects the Right Way: "is" vs "=="](https://realpython.com/courses/python-is-identity-vs-equality)
+
+The == operator compares the value or equality of two objects, whereas the Python is operator checks whether two variables point to the same object in memory. In the vast majority of cases, this means you should use the equality operators == and !=, except when you’re comparing to None.
+
+
+Source: [Identity operators](https://geek-university.com/python/identity-operators/)
+
+Identity operators:
+
+The identity operators in Python are used to determine whether a value is of a certain class or type. They are usually used to determine the type of data a certain variable contains. For example, you can combine the identity operators with the built-in type() function to ensure that you are working with the specific variable type.
+
+Two identity operators are available in Python:
+
+- is – returns True if the type of the value in the right operand points to the same type in the left operand. For example, type(3) is int evaluates to True because 3 is indeed an integer number.
+- is not – returns True if the type of the value in the right operand points to a different type than the value in the left operand. For example, type(3) is not float evaluates to True because 3 is not a floating-point value.
+
+```python
+>>> x = 5
+>>> type(x) is int
+True
+>>> type(x) is not float
+True
+>>> y = 3.23
+>>> type(y) is not float
+False
+>>> type(y) is int
+False
+```
+
+### What are the differences between type() and isinstance()?
+
+Source: [type() vs. isinstance()](https://switowski.com/blog/type-vs-isinstance)
+
+- type only returns the type of an object (its class). We can use it to check if variable is of a type str.
+- isinstance checks if a given object (first parameter) is:
+  - an instance of a class specified as a second parameter. For example, is variable an instance of the str class?
+  - or an instance of a subclass of a class specified as a second parameter. In other words - is variable an instance of a subclass of str?
+
+What does it mean in practice? Let’s say we want to have a custom class that acts like a list but has some additional methods. So we might subclass the list type and add custom functions inside:
+
+```python
+class MyAwesomeList(list):
+    # Add additional functions here
+```
+But now the type and isinstance return different results if we compare this new class to a list!
+
+```python
+>>> my_list = MyAwesomeList()
+>>> type(my_list) is list
+False
+>>> isinstance(my_list, list)
+True
+```
+
+### What will be the out of the following code snippet?
+
+```python
+class Dog:
+    def bark(self):
+        return "The dog is barking!"
+    
+    def eat(self):
+        return "The dog is eating!"
+
+class Cat:
+    def bark(self):
+        return "The cat is barking!"
+    
+    def eat(self, food):
+        return f"The cat is eating {food}!"
+
+class Hybrid(Dog, Cat):
+    def eat(self):
+        return "The animal is eating!"
+
+animal = Hybrid()
+
+print(animal.bark())
+print(animal.eat('meat'))
+```
+
+```sh
+The dog is barking!
+Traceback (most recent call last):
+  File "run.py", line 22, in <module>
+    print(animal.eat('meat'))
+TypeError: eat() takes 1 positional argument but 2 were given
+```
+
+Both of the classes Dog and Cat have the bark() method. Both are inherited in Hybrid class. The method of the first passed class is considered.
+
+Output:
+The dog is barking!
+
+Always the method of the first passed class is considered. Even though the number of arguments are not matched.
+In the case of eat(), it is defined in all of the classes. But the method of Dog is called here.
+
+Output:
+TypeError: eat() takes 1 positional argument but 2 were given
+
+Here the 2 positional arguments self and 'meat' are passed.
