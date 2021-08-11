@@ -42,8 +42,9 @@ A repository to store the answers for frequently asked interview questions.
 - What are the differences between thread and process? How to declare them in Python?
 - How multi-processing is achieved in Python?
 - How multi-threading is achieved in Python?
+- What Is the Python Global Interpreter Lock (GIL)? How to avoid GIL?
 - What are the differences between synchronous and asynchronous programming?
-- How to achieved asynchronous programming in Python?
+- How to achieve asynchronous programming in Python?
 - How to use asyncio in Python?
 - How cache and session are managed in Python?
 - Can session be stored in both client and server sides?
