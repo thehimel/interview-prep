@@ -3,6 +3,7 @@
 A repository to store the answers for frequently asked interview questions.
 
 ## Frequently Asked Interview Questions for the following roles
+
 - Python Backend Developer
 - Python Developer
 - Software Engineer (Python)

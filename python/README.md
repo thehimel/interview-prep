@@ -19,15 +19,15 @@ It is fairly simple to create a generator in Python. It is as easy as defining a
 Docstrings are not actually comments, but, they are documentation strings. These docstrings are within triple quotes. They are not assigned to any variable and therefore, at times, serve the purpose of comments as well. Often used to add some documentation about a class or function.
 
 ```python
-
-def sum(x, y):
-    """
-    Function to return the sum of 2 numbers.
-    :type x: int
-    :type x: int
-    :rtype: int
-    """
-    return x + y
+def get_sum(x, y):
+  """
+  Function to return the sum of 2 numbers.
+  :param x: int
+  :param y: int
+  :rtype: int
+  """
+  
+  return x + y
 ```
 
 ### Q34. What is the usage of help() and dir() functions in Python?
@@ -53,7 +53,11 @@ x = True if 5==5 else False
 
 ### Q38. What does this mean: `*args`, `**kwargs`? And why would we use it?
 
-We use `*args` when we aren’t sure how many arguments are going to be passed to a function, or if we want to pass a stored list or tuple of arguments to a function. `**kwargs` is used when we don’t know how many keyword arguments will be passed to a function, or it can be used to pass the values of a dictionary as keyword arguments. The identifiers args and kwargs are a convention, you could also use `*bob` and `**billy` but that would not be wise.
+- We use `*args` when we are not sure how many arguments are going to be passed to a function, or if we want to pass
+a stored list or tuple of arguments to a function.
+- `**kwargs` is used when we don’t know how many keyword arguments will be passed to a function, or it can be used to
+- pass the values of a dictionary as keyword arguments.
+- The identifiers args and kwargs are a convention, `*bob` and `**billy` can also be used, but that would not be wise.
 
 ### Q50. How is Multi-threading achieved in Python?
 
@@ -95,19 +99,20 @@ print(f"Total threads = {threading.activeCount()}")
 
 ### Q85. What is map function in Python?
 
-map function executes the function given as the first argument on all the elements of the iterable given as the second argument. If the function given takes in more than 1 arguments, then many iterables are given. #Follow the link to know more similar functions.
-
-- [Python's map() - realpython.com](https://realpython.com/python-map-function/)
+- The map function takes 2 arguments.
+- The 1st arg is a function and the 2nd arg is an iterable (ex. list).
+- The function is applied on every element of the iterable and the resulting iterable (ex. list) is returned.
+- If the function given takes in more than 1 arguments, then many iterables are given.
+- [Python's map() - www.realpython.com](https://www.realpython.com/python-map-function/)
 
 ```python
-
 def square(number):
     return number ** 2
 
 numbers = [1, 2, 3, 4, 5]
 squared = map(square, numbers)
 
-list(squared)
+list(squared) # Output: [1, 4, 9, 16, 25]
 ```
 
 ## [Python Interview Questions - InterviewBit](https://www.interviewbit.com/python-interview-questions/)
@@ -146,7 +151,10 @@ def hello():
 hello()  # output => [ 'hello' , 'world' ]
 ```
 
-The beauty of the decorators lies in the fact that besides adding functionality to the output of the method, they can even accept arguments for functions and can further modify those arguments before passing it to the function itself. The inner nested function, i.e. 'wrapper' function, plays a significant role here. It is implemented to enforce encapsulation and thus, keep itself hidden from the global scope
+- The beauty of the decorators lies in the fact that besides adding functionality to the output of the method, they can
+- even accept arguments for functions and can further modify those arguments before passing it to the function itself.
+- The inner nested function, i.e. 'wrapper' function, plays a significant role here.
+  - It is implemented to enforce encapsulation and thus, keep itself hidden from the global scope
 
 ```python
 
@@ -181,46 +189,54 @@ squared_dict = {x:x**2 for x in my_list}    # dict comprehension
 
 ### 14. What is lambda in Python? Why is it used?
 
-Lambda is an anonymous function in Python, that can accept any number of arguments, but can only have a single expression. It is generally used in situations requiring an anonymous function for a short time period. Lambda functions can be used in either of the two ways:
+- Lambda is an anonymous function that can accept any number of arguments, but can only have a single expression.
+- It is generally used in situations requiring an anonymous function for a short time period.
+- Lambda functions can be used in either of the two ways:
 
 ```python
-
-mul = lambda a, b : a * b
+mul = lambda a, b: a * b
 print(mul(2, 5))  # output => 10
 
-# Wrapping lambda functions inside another function
-def myWrapper(n):
-  return lambda a : a * n
 
-mulFive = myWrapper(5)
+# Wrapping lambda functions inside another function
+def my_wrapper(n):
+  return lambda a: a * n
+
+
+mulFive = my_wrapper(5)
 print(mulFive(2))  # output => 10
 ```
 
-## [Concurrency in Python - realpython.com](https://realpython.com/python-concurrency/)
+## [Concurrency in Python - www.realpython.com](https://www.realpython.com/python-concurrency/)
 
 ## Specific Questions from My Interview Experiences
 
 ### What are the differences between 'is' and '=='?
 
-Difference between identity operator (is) and the equality operator (==)
+Difference between identity operator (is) and the equality operator (==).
 
 Source: [Comparing Python Objects the Right Way: "is" vs "=="](https://realpython.com/courses/python-is-identity-vs-equality)
 
-The == operator compares the value or equality of two objects, whereas the Python is operator checks whether two variables point to the same object in memory. In the vast majority of cases, this means you should use the equality operators == and !=, except when you’re comparing to None.
-
+- The `==` operator compares the value or equality of two objects.
+- The `is` operator checks whether two variables point to the same object in memory.
+- This means you should use the equality operators == and !=, except when you are comparing to None.
 
 Source: [Identity operators](https://geek-university.com/python/identity-operators/)
 
-Identity operators:
+### Identity Operators
 
-The identity operators in Python are used to determine whether a value is of a certain class or type. They are usually used to determine the type of data a certain variable contains. For example, you can combine the identity operators with the built-in type() function to ensure that you are working with the specific variable type.
+- The identity operators in Python are used to determine whether a value is of a certain class or type.
+- They are usually used to determine the type of data a certain variable contains.
+- For example, the identity operators can be combined with the `type()` function to ensure the specific variable type.
 
-Two identity operators are available in Python:
+#### Two identity operators are available in Python:
 
-- is – returns True if the type of the value in the right operand points to the same type in the left operand. For example, type(3) is int evaluates to True because 3 is indeed an integer number.
-- is not – returns True if the type of the value in the right operand points to a different type than the value in the left operand. For example, type(3) is not float evaluates to True because 3 is not a floating-point value.
+- `is` returns True if the type of the value in the right operand points to the same type in the left operand.
+  - For example, `type(3) is int` evaluates to `True` because `3` is indeed an `integer number`.
+- `is not` returns True if the types of the values of the operands are different.
+  - For example, `type(3) is not float` evaluates to `True` because `3` is not a `floating-point value`.
 
-```python
+```pycon
 >>> x = 5
 >>> type(x) is int
 True
@@ -237,25 +253,30 @@ False
 
 Source: [type() vs. isinstance()](https://switowski.com/blog/type-vs-isinstance)
 
-- type only returns the type of an object (its class). We can use it to check if variable is of a type str.
+- type only returns the type of object (its class). We can use it to check if variable is of a type `str`.
 - isinstance checks if a given object (first parameter) is:
   - an instance of a class specified as a second parameter. For example, is variable an instance of the str class?
-  - or an instance of a subclass of a class specified as a second parameter. In other words - is variable an instance of a subclass of str?
-
-What does it mean in practice? Let’s say we want to have a custom class that acts like a list but has some additional methods. So we might subclass the list type and add custom functions inside:
+  - or an instance of a subclass of a class specified as a second parameter.
+  - In other words - is variable an instance of a subclass of str?
+  
+#### Example
+- Let’s say we want to have a custom class that acts like a list but has some additional methods.
+- So we might inherit the `list` type and add custom functions inside `MyAwesomeList`.
+- But now the type and isinstance return different results if we compare this new class to a list!
+- The superclass of `my_list` is `list`. Thus, `isinstance(my_list, list)` is `True`.
+- But the type of `my_list` is not `list`.
 
 ```python
 class MyAwesomeList(list):
     # Add additional functions here
-```
-But now the type and isinstance return different results if we compare this new class to a list!
+    pass
 
-```python
->>> my_list = MyAwesomeList()
->>> type(my_list) is list
-False
->>> isinstance(my_list, list)
-True
+my_list = MyAwesomeList()
+
+isinstance(my_list, list) # True
+type(my_list) is list # False
+
+type(my_list) # <class '__main__.MyAwesomeList'>
 ```
 
 ### What will be the out of the following code snippet?
