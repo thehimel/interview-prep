@@ -1,6 +1,6 @@
 # Python Interview Questions
 
-## [Top 100 Python Interview Questions You Must Prepare In 2021 - Edureka](https://www.edureka.co/blog/interview-questions/python-interview-questions/)
+## [Top 100 Python Interview Questions You Must Prepare In 2021 - www.edureka.co](https://www.edureka.co/blog/interview-questions/python-interview-questions/)
 
 ### Q28 What are the generators in python?
 
@@ -94,7 +94,7 @@ x.start()
 y = threading.Thread(target=feed_cat, args=("food",))
 y.start()
 
-print(f"Total threads = {threading.activeCount()}")
+print(f"Total threads = {threading.activeCount()}") # Total threads = 3
 ```
 
 ### Q85. What is map function in Python?
@@ -273,40 +273,47 @@ class MyAwesomeList(list):
 
 my_list = MyAwesomeList()
 
-isinstance(my_list, list) # True
-type(my_list) is list # False
+print(isinstance(my_list, list)) # True
+print(type(my_list) is list) # False
 
-type(my_list) # <class '__main__.MyAwesomeList'>
+print(type(my_list)) # <class '__main__.MyAwesomeList'>
 ```
 
 ### What will be the out of the following code snippet?
 
 ```python
 class Dog:
-    def bark(self):
-        return "The dog is barking!"
-    
-    def eat(self):
-        return "The dog is eating!"
+  @staticmethod
+  def bark():
+    return "The dog is barking!"
+
+  @staticmethod
+  def eat():
+    return "The dog is eating!"
+
 
 class Cat:
-    def bark(self):
-        return "The cat is barking!"
-    
-    def eat(self, food):
-        return f"The cat is eating {food}!"
+  @staticmethod
+  def bark():
+    return "The cat is barking!"
+
+  @staticmethod
+  def eat(food):
+    return f"The cat is eating {food}!"
+
 
 class Hybrid(Dog, Cat):
-    def eat(self):
-        return "The animal is eating!"
+  def eat(self):
+    return "The animal is eating!"
+
 
 animal = Hybrid()
 
 print(animal.bark())
-print(animal.eat('meat'))
+# print(animal.eat('meat'))
 ```
 
-```sh
+```text
 The dog is barking!
 Traceback (most recent call last):
   File "run.py", line 22, in <module>
@@ -314,15 +321,9 @@ Traceback (most recent call last):
 TypeError: eat() takes 1 positional argument but 2 were given
 ```
 
-Both of the classes Dog and Cat have the bark() method. Both are inherited in Hybrid class. The method of the first passed class is considered.
-
-Output:
-The dog is barking!
-
-Always the method of the first passed class is considered. Even though the number of arguments are not matched.
-In the case of eat(), it is defined in all of the classes. But the method of Dog is called here.
-
-Output:
-TypeError: eat() takes 1 positional argument but 2 were given
-
-Here the 2 positional arguments self and 'meat' are passed.
+- Both of the classes Dog and Cat have the bark() method. Both are inherited in Hybrid class.
+- The method of the first passed class is considered. Even though the number of arguments are not matched.
+- Output: `The dog is barking!`
+  - In the case of eat(), it is defined in all the classes. But the method of Dog is called here.
+- Output: `TypeError: eat() takes 1 positional argument but 2 were given`
+  - Here the 2 positional arguments self and 'meat' are passed.
