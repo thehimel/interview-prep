@@ -328,3 +328,99 @@ TypeError: eat() takes 1 positional argument but 2 were given
   - In the case of eat(), it is defined in all the classes. But the method of Dog is called here.
 - Output: `TypeError: eat() takes 1 positional argument but 2 were given`
   - Here the 2 positional arguments self and 'meat' are passed.
+
+### What is the Global Interpreter Lock (GIL) in Python? How to deal with GIL?
+
+Source - https://realpython.com/python-gil/
+
+#### Global Interpreter Lock (GIL)
+
+- GIL is a lock that allows only one thread to hold the control of the Python interpreter.
+- This means that only one thread can be in a state of execution at any point in time.
+- The impact of the GIL is not visible to developers who execute single-threaded programs, 
+but it can be a performance blockage in CPU-bound and multi-threaded code.
+- Since the GIL allows only one thread to execute at a time even in a multi-threaded architecture with more than one
+CPU core, the GIL has gained a reputation as an `infamous` feature of Python.
+
+#### The Impact on Multi-Threaded Python Programs
+
+```python
+# single_threaded.py
+
+import time
+from threading import Thread
+
+COUNT = 50000000
+
+def countdown(n):
+    while n>0:
+        n -= 1
+
+start = time.time()
+countdown(COUNT)
+end = time.time()
+
+print('Time taken in seconds -', end - start)  # Time taken in seconds - 6.20024037361145
+```
+
+```python
+# multi_threaded.py
+
+import time
+from threading import Thread
+
+COUNT = 50000000
+
+def countdown(n):
+    while n>0:
+        n -= 1
+
+t1 = Thread(target=countdown, args=(COUNT//2,))
+t2 = Thread(target=countdown, args=(COUNT//2,))
+
+start = time.time()
+t1.start()
+t2.start()
+t1.join()
+t2.join()
+end = time.time()
+
+print('Time taken in seconds -', end - start)  # Time taken in seconds - 6.924342632293701
+```
+
+- As you can see, both versions take almost same amount of time to finish.
+- In the multi-threaded version the GIL prevented the CPU-bound threads from executing in parallel.
+- The GIL does not have much impact on the performance of I/O-bound multi-threaded programs as the lock is shared
+between threads while they are waiting for I/O.
+- But a program whose threads are entirely CPU-bound, e.g., a program that processes an image in parts using threads,
+would not only become single threaded due to the lock but will also see an increase in execution time,
+as seen in the above example, in comparison to a scenario where it was written to be entirely single-threaded.
+- This increase is the result of acquire and release overheads added by the lock.
+
+#### How to deal with GIL?
+
+##### Multi-processing vs multi-threading
+
+- The most popular way is to use a multi-processing approach where you use multiple processes instead of threads.
+- Each Python process gets its own Python interpreter and memory space so the GIL won’t be a problem.
+- Python has a multiprocessing module which lets us create processes easily like the below code snippet.
+
+```python
+from multiprocessing import Pool
+import time
+
+COUNT = 50000000
+def countdown(n):
+    while n>0:
+        n -= 1
+
+if __name__ == '__main__':
+    pool = Pool(processes=2)
+    start = time.time()
+    r1 = pool.apply_async(countdown, [COUNT//2])
+    r2 = pool.apply_async(countdown, [COUNT//2])
+    pool.close()
+    pool.join()
+    end = time.time()
+    print('Time taken in seconds -', end - start) # Time taken in seconds - 4.060242414474487
+```
