@@ -96,7 +96,7 @@ x.start()
 y = threading.Thread(target=feed_cat, args=("food",))
 y.start()
 
-print(f"Total threads = {threading.activeCount()}") # Total threads = 3
+print(f"Total threads = {threading.active_count() }") # Total threads = 5
 ```
 
 ### Q85. What is map function in Python?
@@ -329,6 +329,63 @@ TypeError: eat() takes 1 positional argument but 2 were given
 - Output: `TypeError: eat() takes 1 positional argument but 2 were given`
   - Here the 2 positional arguments self and 'meat' are passed.
 
+### What are the differences between list and array in Python. Which one is more efficient?
+
+#### Sources
+
+- [Array vs. List in Python](https://learnpython.com/blog/python-array-vs-list/)
+- [Python List vs. Array - when to use?](https://stackoverflow.com/questions/176011/python-list-vs-array-when-to-use)
+- [Python Array](https://www.programiz.com/python-programming/array)
+
+#### List and Array
+
+List and array are ordered, mutable, enclosed in square brackets, and able to store non-unique items.
+
+#### List vs. Array
+
+- In list, elements can be of different data types.
+- In array, elements must be of same data type.
+
+#### Which one is more efficient?
+
+Array is more efficient.
+
+```python
+my_list = [3, 6, 9, 12]
+print(my_list)
+print(type(my_list))
+```
+
+```text
+[3, 6, 9, 12]
+<class 'list'>
+```
+
+```python
+import array as arr
+import numpy as np
+
+# built-in python array
+# i stands for integer.
+py_array = arr.array("i", [3, 6, 9, 12])
+print(py_array)
+print(type(py_array))
+
+# array with numpy
+numpy_array = np.array(["numbers", 3, 6, 9, 12])
+print(numpy_array)
+print(type(numpy_array))
+```
+
+```text
+array('i', [3, 6, 9, 12])
+<class 'array.array'>
+
+['numbers' '3' '6' '9' '12']
+<class 'numpy.ndarray'>
+```
+
+
 ### What is the Global Interpreter Lock (GIL) in Python? How to deal with GIL?
 
 Source - https://realpython.com/python-gil/
@@ -348,7 +405,6 @@ CPU core, the GIL has gained a reputation as an `infamous` feature of Python.
 # single_threaded.py
 
 import time
-from threading import Thread
 
 COUNT = 50000000
 
