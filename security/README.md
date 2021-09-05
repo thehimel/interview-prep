@@ -35,3 +35,21 @@ A typical reflected XSS attacking attempt could look like this:
 
 - https://www.cloudflare.com/learning/security/what-is-web-application-security/
 
+## What is an on-path attacker?
+
+- https://www.cloudflare.com/learning/security/threats/on-path-attack/
+- This is often referred to as a Man-in-the-middle (MITM) attack.
+- On-path attackers place themselves between two devices (often a web browser and a web server) and intercept or modify
+communications between the two. The attackers can then collect information as well as impersonate either of the two
+agents. In addition to websites, these attacks can target email communications, DNS lookups, and public Wi-Fi networks.
+Typical targets of on-path attackers include SaaS businesses, ecommerce businesses, and users of financial apps.
+- You can think of an on-path attacker like a rogue postal worker who sits in a post office and intercepts letters
+written between two people. This postal worker can read private messages and even edit the contents of those letters
+before passing them along to their intended recipients.
+- https://www.professormesser.com/security-plus/sy0-601/sy0-601-video/on-path-attacks/
+- [On-Path Attacks - SY0-601 CompTIA Security+ : 1.4](https://www.youtube.com/watch?v=pY20_7l8AKc)
+
+### What are ways to protect against on-path attackers?
+
+- SSL/TLS, IPSec, VPN, etc.
+
