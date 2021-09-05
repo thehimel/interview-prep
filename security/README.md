@@ -58,3 +58,9 @@ before passing them along to their intended recipients.
 
 - SSL/TLS, IPSec, VPN, etc.
 
+## What is the global DNS hijacking threat?
+
+- https://www.cloudflare.com/learning/security/global-dns-hijacking-threat/
+- The attacker takes control of the DNS admin and redirects the traffic of the original site to a dummy site and
+steals users' credentials when they log in to the fake site.
+- Solution: DNS Providers should enforce 2FA.
