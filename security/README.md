@@ -3,6 +3,7 @@
 ## What is 'defense in depth'?
 
 - https://www.cloudflare.com/de-de/learning/security/glossary/what-is-defense-in-depth/
+- Enforcing security in multiple layers. It is also referred as `layered security`.
 
 ## OWASP Top Ten
 
@@ -35,6 +36,11 @@ A typical reflected XSS attacking attempt could look like this:
 ## How does Cross-Site Request Forgery Work?
 
 - https://www.cloudflare.com/learning/security/threats/cross-site-request-forgery/
+
+## What is cross-site scripting (XSS)?
+
+- https://portswigger.net/web-security/cross-site-scripting
+- Attacker inserts malicious code in the client side to steal information i.e. session token.
 
 ## What are common web app security vulnerabilities? And how to overcome them?
 
@@ -121,4 +127,20 @@ number for the purpose of sharing that information publicly. The goal of doxing 
 ## What is HTTPS inspection?
 
 - https://www.cloudflare.com/learning/security/what-is-https-inspection/
-- Decrypting HTTPS traffic to block malicious activity by impersonating client and server like MITM attack.
+- Decrypting HTTPS traffic to block malicious activity by impersonating client and server like `MITM` attack.
+
+## What is threat intelligence in cyber-security?
+
+- https://www.cloudflare.com/learning/security/glossary/what-is-threat-intelligence/
+- The practice of distributing the information about the potential attacks an organization may face and how to detect
+and stop those attacks.
+
+## What is threat modeling?
+
+- https://www.csoonline.com/article/3537370/threat-modeling-explained-a-process-for-anticipating-cyber-attacks.html
+- Threat modeling is a structured process through which IT pros can identify potential security threats and
+vulnerabilities, quantify the seriousness, and prioritize techniques to mitigate attack and protect IT resources.
+
+## Top 10 Most Common Types of Cyber-Attacks
+
+- https://blog.netwrix.com/2018/05/15/top-10-most-common-types-of-cyber-attacks/
