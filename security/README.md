@@ -30,3 +30,8 @@ like that: `https://security.stackexchange.com/account?new_password=abc123`
 - In a cross-site scripting attack, the attacker makes you involuntarily execute client-side code, most likely JS.
 A typical reflected XSS attacking attempt could look like this:
 `https://security.stackexchange.com/search?q="><script>alert(document.cookie)</script>`
+
+## What are common web app security vulnerabilities? And how to overcome them?
+
+- https://www.cloudflare.com/learning/security/what-is-web-application-security/
+
