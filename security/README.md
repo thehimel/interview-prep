@@ -148,3 +148,8 @@ vulnerabilities, quantify the seriousness, and prioritize techniques to mitigate
 ## What happens in a TLS handshake?
 
 - https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/
+
+## What is HTTPS?
+
+- https://www.cloudflare.com/learning/ssl/what-is-https/
+- HTTPS = HTTP + TLS
