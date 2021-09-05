@@ -144,3 +144,7 @@ vulnerabilities, quantify the seriousness, and prioritize techniques to mitigate
 ## Top 10 Most Common Types of Cyber-Attacks
 
 - https://blog.netwrix.com/2018/05/15/top-10-most-common-types-of-cyber-attacks/
+
+## What happens in a TLS handshake?
+
+- https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/
