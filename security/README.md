@@ -71,5 +71,17 @@ steals users' credentials when they log in to the fake site.
 - Attacker tells that it has a shorter path to a set of IPs and the BGP router forwards the traffic through forged AS.
 
 ## What is a zero-day exploit?
+
 - https://www.cloudflare.com/learning/security/threats/zero-day-exploit/
 - Attacker exploits a known vulnerability. Organization has zero-day to resolve the issue once known.
+
+## What is swatting?
+
+- https://www.cloudflare.com/learning/security/glossary/what-is-swatting/
+- Keeping some criminal footprint in victim's area presence, and then call the law enforcement authority.
+
+## What is doxing?
+
+- https://www.cloudflare.com/learning/security/glossary/what-is-swatting/
+- Doxing (or doxxing) is the practice of researching someone’s personal information such as identity, address, and phone
+number for the purpose of sharing that information publicly. The goal of doxing is to disrupt the victim’s privacy.
