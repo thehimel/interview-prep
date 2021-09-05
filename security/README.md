@@ -85,3 +85,40 @@ steals users' credentials when they log in to the fake site.
 - https://www.cloudflare.com/learning/security/glossary/what-is-swatting/
 - Doxing (or doxxing) is the practice of researching someone’s personal information such as identity, address, and phone
 number for the purpose of sharing that information publicly. The goal of doxing is to disrupt the victim’s privacy.
+
+## What is a KRACK attack?
+
+- https://www.cloudflare.com/learning/security/what-is-a-krack-attack/
+
+## What is Meltdown/Spectre?
+
+- https://www.cloudflare.com/learning/security/threats/meltdown-spectre/
+- Vulnerabilities found in Intel, AMD, Apple, and ARM processor chips.
+- Solution: Replacement of processor or OS Patch.
+
+## What is a malicious payload?
+
+- https://www.cloudflare.com/learning/security/glossary/malicious-payload/
+- Attacker sends the victim a payload that once executed causes harm to the victim.
+
+
+## What is a firewall?
+
+- https://www.cloudflare.com/learning/security/what-is-a-firewall/
+- A software between the internet and the trusted network.
+
+## What is a next-generation firewall (NGFW)?
+
+- https://www.cloudflare.com/learning/security/what-is-next-generation-firewall-ngfw/
+- Enhanced, secured, and more powerful firewall.
+- Uses Deep Packet Inspection (DPI).
+
+## What are packet filtering and deep packet inspection (DPI)?
+
+- https://www.cloudflare.com/learning/security/what-is-next-generation-firewall-ngfw/
+- Packet filtering uses only the packet header for inspection, but DPI uses both header and body.
+
+## What is HTTPS inspection?
+
+- https://www.cloudflare.com/learning/security/what-is-https-inspection/
+- Decrypting HTTPS traffic to block malicious activity by impersonating client and server like MITM attack.
