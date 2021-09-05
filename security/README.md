@@ -64,3 +64,12 @@ before passing them along to their intended recipients.
 - The attacker takes control of the DNS admin and redirects the traffic of the original site to a dummy site and
 steals users' credentials when they log in to the fake site.
 - Solution: DNS Providers should enforce 2FA.
+
+## What is BGP hijacking?
+
+- https://www.cloudflare.com/learning/security/glossary/bgp-hijacking/
+- Attacker tells that it has a shorter path to a set of IPs and the BGP router forwards the traffic through forged AS.
+
+## What is a zero-day exploit?
+- https://www.cloudflare.com/learning/security/threats/zero-day-exploit/
+- Attacker exploits a known vulnerability. Organization has zero-day to resolve the issue once known.
