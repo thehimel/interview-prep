@@ -15,5 +15,5 @@
   - Group 3
     - Security Misconfiguration
     - Insecure Deserialization
-    - Insufficient Logging and Monitoring
     - Using Components with Known Vulnerabilities
+    - Insufficient Logging and Monitoring
