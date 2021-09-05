@@ -40,7 +40,7 @@ A typical reflected XSS attacking attempt could look like this:
 ## What is cross-site scripting (XSS)?
 
 - https://portswigger.net/web-security/cross-site-scripting
-- Attacker inserts malicious code in the client side to steal information i.e. session token.
+- Attacker inserts malicious code in the client side to perform evil activities i.e. steal session token.
 
 ## What are common web app security vulnerabilities? And how to overcome them?
 
