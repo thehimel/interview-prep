@@ -10,10 +10,10 @@
     - Sensitive Data Exposure
   - Group 2
     - Injection
-    - Cross-site Scripting (XSS)
+    - Cross-Site Scripting (XSS)
     - XML External Entities (XXE)
   - Group 3
     - Security Misconfiguration
     - Insecure Deserialization
     - Using Components with Known Vulnerabilities
-    - Insufficient Logging and Monitoring
+    - Insufficient Logging & Monitoring
