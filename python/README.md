@@ -481,7 +481,7 @@ if __name__ == '__main__':
     print('Time taken in seconds -', end - start) # Time taken in seconds - 4.060242414474487
 ```
 
-### How to Get Information About an Exception?
+### How to Get Information about an Exception?
 
 Source: https://docs.python.org/3/library/sys.html
 
