@@ -480,3 +480,16 @@ if __name__ == '__main__':
     end = time.time()
     print('Time taken in seconds -', end - start) # Time taken in seconds - 4.060242414474487
 ```
+
+### How to Get Information About an Exception?
+
+Source: https://docs.python.org/3/library/sys.html
+
+#### sys.exc_info()
+
+- This function returns a tuple of three values that give information about the exception that is currently being handled.
+- If no exception is being handled anywhere on the stack, a tuple containing three None values is returned. Otherwise,
+the values returned are (type, value, traceback). Their meaning is: type gets the type of the exception being handled
+(a subclass of BaseException); value gets the exception instance (an instance of the exception type); traceback gets a
+traceback object which encapsulates the call stack at the point where the exception originally occurred.
+- Examples: https://www.programcreek.com/python/example/59/sys.exc_info
