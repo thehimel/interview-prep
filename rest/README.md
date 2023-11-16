@@ -1,11 +1,21 @@
 # REST
 
-## [27 REST API Interview Questions (ANSWERED) Devs Must Know in 2020](https://www.fullstack.cafe/blog/rest-api-interview-questions)
 
-## SOAP APIs vs. REST APIs
+## 27 REST API Interview Questions (ANSWERED) Devs Must Know
 
-- https://www.cloudflare.com/learning/security/api/what-is-an-api/
-- SOAP APIs and REST APIs describe different categories of APIs.
-- SOAP (Simple Object Access Protocol) is a type of protocol. SOAP APIs are APIs that only use the SOAP protocol.
-- REST (REpresentational State Transfer) is an architectural style for web services.A REST API is any API built using
-REST architecture. Unlike SOAP APIs, REST APIs work with any protocol. Most APIs today are REST APIs.
+> URL: https://www.fullstack.cafe/blog/rest-api-interview-questions
+
+- What is REST Web Service?
+  - REST stands for `REpresentational State Transfer`.
+  - REST is an architectural style for designing and developing applications accessed via network.
+  - They rely on a stateless client-server architecture.
+  - The client must include all required information during request for the server to process the response.
+  - There is no specified protocol for REST. However, `HTTP/HTTPS` protocol is widely used in REST.
+  > Author: Himel Das
+
+## QnA
+
+- SOAP APIs vs. REST APIs 
+  - Source: https://www.cloudflare.com/learning/security/api/what-is-an-api/
+- What are the crucial API security measures?
+  - Source: https://www.cloudflare.com/learning/security/api/what-is-an-api/
