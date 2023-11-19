@@ -19,3 +19,7 @@
   - Source: https://www.cloudflare.com/learning/security/api/what-is-an-api/
 - What are the crucial API security measures?
   - Source: https://www.cloudflare.com/learning/security/api/what-is-an-api/
+
+## Resources
+
+- [API Quick Reference by Waleed Mousa](assets/api-quick-reference.pdf)
