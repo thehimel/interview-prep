@@ -52,3 +52,7 @@ A repository to store the answers for frequently asked interview questions.
 
 ### Answers for most of the questions:
 - https://book.pythontips.com/en/latest/
+
+## Personality Tests
+
+* [How to Pass Personality Tests - CareerVidz](https://youtu.be/Lg3dBv0JYwU?si=RHHz9QcY_MgrxSop)
