@@ -1,5 +1,13 @@
 # Python Interview Questions
 
+## Important Topics
+
+* Basics: Variables, conditions, chained conditionals, operators, control flow (if/else), loops and iterables,
+  basic data structures, functions, mutable vs immutables, common methods, file i/o.
+* Advanced: OOPs, data structures, comprehensions, lambda functions, map, filter, collections, *args & **kwargs,
+  inheritance, dunder methods, pip, environments, modules, async io.
+* Expert: Decorators, generators, context manager, metaclasses, parallelism, testing, packages, cython.
+
 ## [Top 100 Python Interview Questions You Must Prepare In 2021 - www.edureka.co](https://www.edureka.co/blog/interview-questions/python-interview-questions/)
 
 ### Q28 What are the generators in python?
